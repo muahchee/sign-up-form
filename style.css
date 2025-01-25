@@ -59,7 +59,9 @@ h1, h2, h3, h4, h5, h6 {
 
 *{
     --light: blanchedalmond;
-    --traslucent: rgba(10, 71, 51, 0.61);
+    --lightest: rgb(255, 241, 219);
+    --traslucent: rgba(8, 63, 45, 0.692);
+    --shadow: rgb(207, 189, 161);
     --dark: rgb(3, 48, 33);
 }
 
@@ -105,7 +107,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 10px;
+    gap: 20px;
 
     position: absolute;
     top: 300px;
@@ -143,13 +145,67 @@ body{
 form{
     display: flex;
     flex-direction: column;
-    gap: 30px;
-
-    padding-left: 50px;
+    gap: 40px;
 }
 
 .intro p{
     max-width: 70ch;
-
     margin-bottom: 10px;
+    padding-left: 50px;
+}
+
+/* middle section */
+
+.middle-section{
+    background-color: var(--lightest);
+    padding: 20px 50px;
+    box-shadow: 0 5px 10px var(--shadow);
+}
+
+.form-items{
+    display: flex;
+    flex-wrap: wrap;
+
+    margin-top: 20px;
+
+}
+
+.form-items p{
+    display: flex;
+    flex-direction: column;
+
+    margin: 15px 80px 0 0;
+}
+
+label{
+    font-size: 0.8rem;
+}
+
+input{
+    background-color: var(--lightest);
+    border: 2px solid var(--shadow);
+    border-radius: 5px;
+}
+
+/* bottom section */
+
+.finalize{
+    display: flex;
+    flex-direction: column;
+
+    gap: 30px;
+    padding-left: 50px;
+}
+
+.finalize button{
+    width: 20%;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+
+    background-color: var(--traslucent);
+    color: var(--light);
+    border: none;
+    border-radius: 10px;
+
 }
