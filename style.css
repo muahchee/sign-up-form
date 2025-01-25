@@ -166,13 +166,14 @@ form{
     display: flex;
     flex-wrap: wrap;
 
-    margin-top: 20px;
+    margin: 20px 0;
 
 }
 
 .form-items p{
     display: flex;
     flex-direction: column;
+    position: relative;
 
     margin: 15px 80px 0 0;
 }
@@ -185,7 +186,27 @@ input{
     background-color: var(--lightest);
     border: 2px solid var(--shadow);
     border-radius: 5px;
+    outline: none;
 }
+
+input:focus{
+    border-color: rgb(128, 198, 226);
+    box-shadow: 3px 3px 8px var(--shadow);
+}
+
+input[type="password"]:invalid{
+    border-color: red;
+}
+
+
+input[type="password"]:invalid + span::after{
+    content: "⚠ Needs 8 characters or more!";
+    font-size: 1rem;
+    color: red;
+    position: absolute;
+    bottom: -30px;
+}
+
 
 /* bottom section */
 
