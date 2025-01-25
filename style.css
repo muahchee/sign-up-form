@@ -69,6 +69,7 @@ body{
     height: 100vh;
 
     font-size: 1.2rem;
+    font-family: Optima, Candara, 'Noto Sans', source-sans-pro, sans-serif;;
 
     background-color: var(--light);
     color: var(--dark);
@@ -133,5 +134,22 @@ body{
 }
 
 .right-container{
-    
+    display: flex;
+    align-items: center;
+
+    width: 60%;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+    padding-left: 50px;
+}
+
+.intro p{
+    max-width: 70ch;
+
+    margin-bottom: 10px;
 }
